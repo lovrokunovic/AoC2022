@@ -8,7 +8,6 @@ const lineReader = readline.createInterface({
 });
 
 const elfCaloriesMap = new Map();
-
 let currentElfCaloriesCount = 0;
 let currentElf = 1;
 
@@ -19,7 +18,6 @@ lineReader.on("line", (line) => {
     currentElfCaloriesCount = 0;
   } else {
     const calories = parseInt(line);
-
     currentElfCaloriesCount += calories;
   }
 });
