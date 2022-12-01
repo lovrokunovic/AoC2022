@@ -7,7 +7,6 @@ const lineReader = readline.createInterface({
   crlfDelay: Infinity,
 });
 
-let maxAmountCalories = 0;
 const elfCaloriesMap = new Map();
 
 let currentElfCaloriesCount = 0;
@@ -17,9 +16,6 @@ lineReader.on("line", (line) => {
   if (line === "") {
     elfCaloriesMap.set(currentElf, currentElfCaloriesCount);
     currentElf += 1;
-
-    if (currentElfCaloriesCount > maxAmountCalories)
-      maxAmountCalories = currentElfCaloriesCount;
     currentElfCaloriesCount = 0;
   } else {
     const calories = parseInt(line);
