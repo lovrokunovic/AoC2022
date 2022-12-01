@@ -25,11 +25,13 @@ lineReader.on("line", (line) => {
 });
 
 lineReader.on("close", () => {
-  const sorted = Array.from(elfCaloriesMap.values()).sort((a, b) => {
-    return a < b ? 1 : -1;
-  });
-  const sum = sorted.slice(0, 3).reduce((prev, curr) => {
-    return prev + curr;
-  });
+  const sum = Array.from(elfCaloriesMap.values())
+    .sort((a, b) => {
+      return a < b ? 1 : -1;
+    })
+    .slice(0, 3)
+    .reduce((prev, curr) => {
+      return prev + curr;
+    });
   console.log(sum);
 });

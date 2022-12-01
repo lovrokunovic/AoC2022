@@ -28,8 +28,7 @@ lineReader.on("close", () => {
     const sorted = Array.from(elfCaloriesMap.values()).sort((a, b) => {
         return a < b ? 1 : -1;
     });
-    const top3 = sorted.slice(0, 3);
-    const sum = top3.reduce((prev, curr) => {
+    const sum = sorted.slice(0, 3).reduce((prev, curr) => {
         return prev + curr;
     });
     console.log(sum);
