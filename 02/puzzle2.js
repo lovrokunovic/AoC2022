@@ -11,8 +11,9 @@ const lineReader = readline_1.default.createInterface({
     crlfDelay: Infinity,
 });
 let score = 0;
-//A opponent rock, B opponent paper, C oponnent scissors 1, 2, 3
-//X I lose, Y I draw, Z I win   0, 3, 6
+//A opponent rock, B opponent paper, C oponnent scissors
+//X I lose, Y I draw, Z I win, scores still the same for rock, paper, scissors
+//lose, win, draw 0, 3, 6
 const scoreMapping = {
     AX: 3 + 0,
     AY: 1 + 3,
