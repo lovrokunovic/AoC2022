@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/lovrokunovic/AoC2022#readme",
   "dependencies": {
-    "@types/node": "^18.11.10",
+    "@types/node": "^18.14.6",
     "fs": "^0.0.1-security",
     "typescript": "^4.9.3"
   }
